@@ -33,3 +33,9 @@ ReactDOM.render(<Main />, document.querySelector('#app'))
 if (module.hot) {
   module.hot.accept()
 }
+
+// mainUser
+// nelson
+// mongodb+srv://mainUser:nelson@cluster0.xuhqx.mongodb.net/ReactCourse?retryWrites=true&w=majority
+// react npm run dev
+// backend npm run start
