@@ -12,6 +12,7 @@ import About from './components/About'
 import Terms from './components/Terms'
 import CreatePost from './components/CreatePost'
 import ViewSinglePost from './components/ViewSinglePost'
+import FlashMessages from './components/FlashMessages'
 
 function Main() {
   const [loggedIn, setLoggedIn] = useState(
@@ -20,6 +21,7 @@ function Main() {
 
   return (
     <BrowserRouter>
+      <FlashMessages />
       <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Switch>
         <Route path="/" exact>
