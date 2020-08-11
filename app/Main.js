@@ -8,6 +8,7 @@ import Home from './components/Home'
 import Footer from './components/Footer'
 import About from './components/About'
 import Terms from './components/Terms'
+import CreatePost from './components/CreatePost'
 
 function Main() {
   const [loggedIn, setLoggedIn] = useState(
@@ -19,8 +20,10 @@ function Main() {
       <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
       <Switch>
         <Route path="/" exact>
-          <Home />
-          <HomeGuest />
+          {loggedIn ? <Home /> : <HomeGuest />}
+        </Route>
+        <Route path="/create-post">
+          <CreatePost />
         </Route>
         <Route path="/about-us">
           <About />
