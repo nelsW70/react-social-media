@@ -2,6 +2,15 @@ body {
   font-family: 'Public Sans', sans-serif;
 }
 
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
 .header-bar {
   background-color: #292929;
 }
