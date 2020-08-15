@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Page from './Page'
 import { useParams, Link } from 'react-router-dom'
 import Axios from 'axios'
 import LoadingDotsIcon from './LoadingDotsIcon'
 import ReactMarkdown from 'react-markdown'
 import ReactTooltip from 'react-tooltip'
+import NotFound from './NotFound'
 
 function ViewSinglePost() {
   const { id } = useParams()
@@ -22,7 +23,7 @@ function ViewSinglePost() {
         setPost(response.data)
         setIsLoading(false)
       } catch (e) {
-        console.log('There was a problem or the request was cancelled')
+        console.log('There was a problem or the request was cancelled.')
       }
     }
     fetchPost()
@@ -30,6 +31,10 @@ function ViewSinglePost() {
       ourRequest.cancel()
     }
   }, [])
+
+  if (!isLoading && !post) {
+    return <NotFound />
+  }
 
   if (isLoading)
     return (
