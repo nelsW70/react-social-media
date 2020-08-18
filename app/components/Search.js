@@ -52,7 +52,7 @@ function Search() {
                   src="https://gravatar.com/avatar/b9408a09298632b5151200f3449434ef?s=128"
                 />{' '}
                 <strong>Example Post #1</strong>
-                <span className="text-muted small">by brad on 2/10/2020 </span>
+                <span className="text-muted small"> by brad on 2/10/2020 </span>
               </a>
               <a href="#" className="list-group-item list-group-item-action">
                 <img
@@ -61,6 +61,7 @@ function Search() {
                 />{' '}
                 <strong>Example Post #2</strong>
                 <span className="text-muted small">
+                  {' '}
                   by barksalot on 2/10/2020{' '}
                 </span>
               </a>
@@ -70,7 +71,7 @@ function Search() {
                   src="https://gravatar.com/avatar/b9408a09298632b5151200f3449434ef?s=128"
                 />{' '}
                 <strong>Example Post #3</strong>
-                <span className="text-muted small">by brad on 2/10/2020 </span>
+                <span className="text-muted small"> by brad on 2/10/2020 </span>
               </a>
             </div>
           </div>
