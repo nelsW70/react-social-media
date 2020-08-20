@@ -9,7 +9,6 @@ Axios.defaults.baseURL = 'http://localhost:8080'
 import StateContext from './StateContext'
 import DispatchContext from './DispatchContext'
 
-// My Components
 import LoadingDotsIcon from './components/LoadingDotsIcon'
 import Header from './components/Header'
 import HomeGuest from './components/HomeGuest'
@@ -23,8 +22,8 @@ import FlashMessages from './components/FlashMessages'
 import Profile from './components/Profile'
 import EditPost from './components/EditPost'
 import NotFound from './components/NotFound'
-import Search from './components/Search'
-import Chat from './components/Chat'
+const Search = React.lazy(() => import('./components/Search'))
+const Chat = React.lazy(() => import('./components/Chat'))
 
 function Main() {
   const initialState = {
@@ -88,7 +87,6 @@ function Main() {
   }, [state.loggedIn])
 
   // Check if token has expired on first render
-
   useEffect(() => {
     if (state.loggedIn) {
       const ourRequest = Axios.CancelToken.source()
@@ -156,9 +154,13 @@ function Main() {
             classNames="search-overlay"
             unmountOnExit
           >
-            <Search />
+            <div className="search-overlay">
+              <Suspense fallback="">
+                <Search />
+              </Suspense>
+            </div>
           </CSSTransition>
-          <Chat />
+          <Suspense fallback="">{state.loggedIn && <Chat />}</Suspense>
           <Footer />
         </BrowserRouter>
       </DispatchContext.Provider>
@@ -171,7 +173,3 @@ ReactDOM.render(<Main />, document.querySelector('#app'))
 if (module.hot) {
   module.hot.accept()
 }
-
-// nWf2
-// nWf2@test.com
-// 222222222222
