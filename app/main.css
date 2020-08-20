@@ -1,5 +1,9 @@
 body {
-  font-family: 'Public Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 #app {
@@ -189,6 +193,11 @@ textarea.tall-textarea {
   border: none;
   padding: 0;
   margin: 0;
+}
+
+.btn-success {
+  background-color: #226f34;
+  border-color: #226f34;
 }
 
 /* Search Overlay */
@@ -596,4 +605,23 @@ textarea.tall-textarea {
   60% {
     opacity: 1;
   }
+}
+
+/* for screenreaders */
+.sr-only {
+  position: absolute;
+  /* hidden input will throw error in wave unless color property exists */
+  color: black;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* added line */
+  border: 0;
+}
+
+a {
+  color: #00458f;
 }

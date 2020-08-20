@@ -37,20 +37,28 @@ function HeaderLoggedOut(props) {
     <form onSubmit={handleSubmit} className="mb-0 pt-2 pt-md-0">
       <div className="row align-items-center">
         <div className="col-md mr-0 pr-md-0 mb-3 mb-md-0">
+          <label htmlFor="username" className="sr-only">
+            username
+          </label>
           <input
             onChange={e => setUsername(e.target.value)}
             name="username"
-            className="form-control form-control-sm input-dark"
+            id="username"
+            className="form-control form-control-sm"
             type="text"
             placeholder="Username"
             autoComplete="off"
           />
         </div>
         <div className="col-md mr-0 pr-md-0 mb-3 mb-md-0">
+          <label htmlFor="password" className="sr-only">
+            password
+          </label>
           <input
             onChange={e => setPassword(e.target.value)}
             name="password"
-            className="form-control form-control-sm input-dark"
+            id="password"
+            className="form-control form-control-sm"
             type="password"
             placeholder="Password"
           />
