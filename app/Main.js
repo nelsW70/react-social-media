@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useState, useReducer, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 import { useImmerReducer } from 'use-immer'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
@@ -9,6 +9,7 @@ Axios.defaults.baseURL = 'http://localhost:8080'
 import StateContext from './StateContext'
 import DispatchContext from './DispatchContext'
 
+// My Components
 import Header from './components/Header'
 import HomeGuest from './components/HomeGuest'
 import Home from './components/Home'
