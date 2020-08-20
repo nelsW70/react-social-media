@@ -126,6 +126,8 @@ body {
 
 .form-group {
   position: relative;
+  margin-bottom: 0;
+  height: 100px;
 }
 
 .liveValidateMessage {
@@ -511,6 +513,9 @@ textarea.tall-textarea {
     visibility: hidden;
     transform: translateX(-50%) scale(1.2);
   }
+}
+.alert.alert-danger.small.liveValidationMessage {
+  padding: 0.25rem 1.25rem;
 }
 
 .small-header-avatar {
