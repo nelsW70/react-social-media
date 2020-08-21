@@ -118,6 +118,9 @@ function Chat() {
         id="chatForm"
         className="chat-form border-top"
       >
+        <label htmlFor="chatField" className="sr-only sr-chatfield">
+          Type a message
+        </label>
         <input
           value={state.fieldValue}
           onChange={handleFieldChange}

@@ -16,7 +16,7 @@ h1 {
   flex: 1;
 }
 .header-bar {
-  background-color: #292929;
+  background-color: #2a4869 !important;
 }
 
 .container--narrow {
@@ -368,7 +368,7 @@ textarea.tall-textarea {
 }
 
 .chat-title-bar {
-  background-color: #292929;
+  background-color: #2a4869 !important;
   color: #fff;
   padding: 4px 7px;
   display: flex;
@@ -610,8 +610,7 @@ textarea.tall-textarea {
 /* for screenreaders */
 .sr-only {
   position: absolute;
-  /* hidden input will throw error in wave unless color property exists */
-  color: black;
+
   width: 1px;
   height: 1px;
   padding: 0;
@@ -620,6 +619,15 @@ textarea.tall-textarea {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap; /* added line */
   border: 0;
+}
+
+.sr-header {
+  /* hidden input will throw error in wave unless color property exists */
+  color: white;
+}
+
+.sr-chatfield {
+  color: black;
 }
 
 a {

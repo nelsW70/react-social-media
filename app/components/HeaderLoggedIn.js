@@ -28,8 +28,8 @@ function HeaderLoggedIn(props) {
         data-for="search"
         data-tip="Search"
         onClick={handlerSearchIcon}
-        href="#"
         className="text-white mr-2 header-search-icon"
+        role="search"
       >
         <i className="fas fa-search"></i>
       </a>
@@ -59,7 +59,11 @@ function HeaderLoggedIn(props) {
         to={`/profile/${appState.user.username}`}
         className="mr-2"
       >
-        <img className="small-header-avatar" src={appState.user.avatar} />
+        <img
+          className="small-header-avatar"
+          src={appState.user.avatar}
+          alt="user avatar"
+        />
       </Link>
       <ReactTooltip place="bottom" id="profile" class="custom-tooltip" />{' '}
       <Link className="btn btn-sm btn-success mr-2" to="/create-post">

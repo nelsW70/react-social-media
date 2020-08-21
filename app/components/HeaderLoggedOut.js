@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react'
+import React, { useState, useContext } from 'react'
 import Axios from 'axios'
 import DispatchContext from '../DispatchContext'
 
@@ -37,7 +37,7 @@ function HeaderLoggedOut(props) {
     <form onSubmit={handleSubmit} className="mb-0 pt-2 pt-md-0">
       <div className="row align-items-center">
         <div className="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-          <label htmlFor="username" className="sr-only">
+          <label htmlFor="username" className="sr-only sr-header">
             username
           </label>
           <input
@@ -51,7 +51,7 @@ function HeaderLoggedOut(props) {
           />
         </div>
         <div className="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-          <label htmlFor="password" className="sr-only">
+          <label htmlFor="password" className="sr-only sr-header">
             password
           </label>
           <input

@@ -108,7 +108,11 @@ function ViewSinglePost(props) {
 
       <p className="text-muted small mb-4">
         <Link to={`/profile/${post.author.username}`}>
-          <img className="avatar-tiny" src={post.author.avatar} />
+          <img
+            className="avatar-tiny"
+            src={post.author.avatar}
+            alt="user avatar"
+          />
         </Link>
         Posted by{' '}
         <Link to={`/profile/${post.author.username}`}>
