@@ -131,7 +131,7 @@ h1 {
 .form-group {
   position: relative;
   margin-bottom: 0;
-  height: 100px;
+  /* height: 100px; */
 }
 
 .liveValidateMessage {
@@ -198,6 +198,10 @@ textarea.tall-textarea {
 .btn-success {
   background-color: #226f34;
   border-color: #226f34;
+}
+
+.btn-save-post {
+  margin-top: 1rem;
 }
 
 /* Search Overlay */
