@@ -211,7 +211,10 @@ function EditPost(props) {
           )}
         </div>
 
-        <button className="btn btn-primary" disabled={state.isSaving}>
+        <button
+          className="btn btn-primary btn-save-post"
+          disabled={state.isSaving}
+        >
           Save Updates
         </button>
       </form>
